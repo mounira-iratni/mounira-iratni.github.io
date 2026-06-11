@@ -97,3 +97,12 @@ body {
     background-color: #834cd4; /* Mauve un peu plus sombre au survol */
     transform: translateY(-2px);
 }
+
+.avatar-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;       
+    object-fit: cover;        
+    border: 1px solid #eee;  
+}
+

@@ -98,11 +98,10 @@ body {
     transform: translateY(-2px);
 }
 
-.avatar-photo {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;       
-    object-fit: cover;        
-    border: 1px solid #eee;  
+.avatar {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
 

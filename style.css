@@ -1,0 +1,99 @@
+/* RESET & STYLES GENERAUX */
+* {
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+    color: #111111;
+    line-height: 1.6;
+}
+
+/* BARRE DE NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #FFFFFF;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-placeholder {
+    width: 45px;
+    height: 45px;
+    background-color: #e2d1f0; /* Un fond mauve temporaire pour votre future photo */
+    border-radius: 50%;
+}
+
+.nav-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #9b5de5; /* Le mauve signature d'Amaëlle */
+}
+
+/* SECTION HERO (BIENVENUE) */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #555555;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+/* BOUTON MAUVE */
+.cta-button {
+    display: inline-block;
+    background-color: #9b5de5; /* Mauve */
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cta-button:hover {
+    background-color: #834cd4; /* Mauve un peu plus sombre au survol */
+    transform: translateY(-2px);
+}

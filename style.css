@@ -99,9 +99,32 @@ body {
 }
 
 .avatar {
-    width: 45px !important;
-    height: 45px !important;
+    width: 32px !important;
+    height: 32px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
 }
+
+/* LIENS PROFESSIONNELS */
+.professional-links {
+    margin-top: 30px;
+}
+
+.professional-link {
+    display: inline-block;
+    color: #9b5de5;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #9b5de5;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.professional-link:hover {
+    background-color: #9b5de5;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
 

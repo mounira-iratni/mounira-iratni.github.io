@@ -10,6 +10,9 @@ body {
     background-color: #FFFFFF;
     color: #111111;
     line-height: 1.6;
+    height: 100vh;
+    width: 100%;
+    
 }
 
 /* BARRE DE NAVIGATION */

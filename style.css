@@ -5,14 +5,17 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #FFFFFF;
+    background: linear-gradient(135deg, #d2eeee 0%, #c7e7e5 40%, #e8d7ff 100%);
     color: #111111;
     line-height: 1.6;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    
 }
 
 /* BARRE DE NAVIGATION */
@@ -21,7 +24,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: #FFFFFF;
+    background-color: rgba(41, 180, 157, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -33,7 +40,7 @@ body {
 .avatar-placeholder {
     width: 45px;
     height: 45px;
-    background-color: #e2d1f0; /* Un fond mauve temporaire pour votre future photo */
+    background-color: #86d4ce; /* Un fond mauve temporaire pour votre future photo */
     border-radius: 50%;
 }
 
@@ -56,7 +63,7 @@ body {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #9b5de5; /* Le mauve signature d'Amaëlle */
+    color: #439b8c; 
 }
 
 /* SECTION HERO (BIENVENUE) */
@@ -68,7 +75,7 @@ body {
     text-align: center;
     min-height: 70vh;
     padding: 0 20px;
-    background: linear-gradient(135deg, #f8f4ff 0%, #f0e6ff 50%, #e8d7ff 100%);
+    background: linear-gradient(135deg, #d2eeee 0%, #c7e7e5 50%, #e8d7ff 100%);
     position: relative;
     overflow: hidden;
 }
@@ -78,7 +85,7 @@ body {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(155, 93, 229, 0.3) 0%, rgba(155, 93, 229, 0.1) 40%, transparent 70%);
+    background: radial-gradient(circle, rgba(67, 155, 140, 0.3) 0%, rgba(67, 155, 140, 0.1) 40%, transparent 70%);
     border-radius: 50%;
     top: -150px;
     right: -150px;
@@ -90,7 +97,7 @@ body {
     position: absolute;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(155, 93, 229, 0.25) 0%, rgba(155, 93, 229, 0.05) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(67, 155, 140, 0.25) 0%, rgba(67, 155, 140, 0.05) 50%, transparent 70%);
     border-radius: 50%;
     bottom: -100px;
     left: -100px;
@@ -109,30 +116,45 @@ body {
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: #555555;
-    max-width: 600px;
+    color: #444444;
+    max-width: 680px;
     margin-bottom: 35px;
     position: relative;
     z-index: 1;
 }
 
+.hero-section:hover .hero-title,
+.hero-section:hover .hero-subtitle,
+.hero-section:hover .professional-link,
+.hero-section:hover .cta-button {
+    transform: translateY(-2px);
+}
+
+.hero-section:hover .professional-link,
+.hero-section:hover .cta-button {
+    box-shadow: 0 18px 40px rgba(67, 155, 140, 0.12);
+}
+
 /* BOUTON MAUVE */
 .cta-button {
     display: inline-block;
-    background-color: #9b5de5; /* Mauve */
+    background-color: #439b8c; /* Vert */
     color: #FFFFFF;
     text-decoration: none;
-    padding: 12px 30px;
+    padding: 14px 34px;
+    font-size: 1rem;
     font-weight: 600;
-    border-radius: 6px;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    border-radius: 8px;
+    box-shadow: 0 18px 40px rgba(67, 155, 140, 0.15);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
     z-index: 1;
 }
 
 .cta-button:hover {
-    background-color: #834cd4; /* Mauve un peu plus sombre au survol */
-    transform: translateY(-2px);
+    background-color: #3a8a7c; /* Vert un peu plus sombre au survol */
+    transform: translateY(-3px);
+    box-shadow: 0 22px 45px rgba(67, 155, 140, 0.2);
 }
 
 /* LIENS PROFESSIONNELS */
@@ -144,24 +166,30 @@ body {
 
 .professional-link {
     display: inline-block;
-    color: #9b5de5;
+    color: #439b8c;
     text-decoration: none;
     font-weight: 600;
     padding: 10px 20px;
-    border: 2px solid #9b5de5;
+    border: 2px solid #439b8c;
     border-radius: 6px;
     transition: all 0.2s ease;
 }
 
 .professional-link:hover {
-    background-color: #9b5de5;
+    background-color: #3a8a7c;
     color: #FFFFFF;
     transform: translateY(-2px);
 }
 
 .avatar {
-    width: 32px !important;
-    height: 32px !important;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
 }
+
+.hero-section {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+}
+

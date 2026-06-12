@@ -65,6 +65,33 @@ body {
     text-align: center;
     min-height: 70vh;
     padding: 0 20px;
+    background: linear-gradient(135deg, #f5f0ff 0%, #e8d7ff 50%, #dac5ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(155, 93, 229, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    pointer-events: none;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(155, 93, 229, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+    pointer-events: none;
 }
 
 .hero-title {
@@ -72,6 +99,9 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: -1px;
+    position: relative;
+    z-index: 1;
+    color: #111111;
 }
 
 .hero-subtitle {
@@ -79,6 +109,8 @@ body {
     color: #555555;
     max-width: 600px;
     margin-bottom: 35px;
+    position: relative;
+    z-index: 1;
 }
 
 /* BOUTON MAUVE */
@@ -91,6 +123,8 @@ body {
     font-weight: 600;
     border-radius: 6px;
     transition: background-color 0.2s ease, transform 0.1s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .cta-button:hover {
@@ -98,16 +132,11 @@ body {
     transform: translateY(-2px);
 }
 
-.avatar {
-    width: 32px !important;
-    height: 32px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-}
-
 /* LIENS PROFESSIONNELS */
 .professional-links {
     margin-top: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .professional-link {
@@ -127,4 +156,9 @@ body {
     transform: translateY(-2px);
 }
 
-
+.avatar {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}

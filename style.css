@@ -104,6 +104,155 @@ body {
     z-index: 0;
 }
 
+.about-section {
+    padding: 80px 8%;
+    background: #eef7f6;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.about-card {
+    background: #ffffff;
+    border: 1px solid rgba(67, 155, 140, 0.15);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 40px rgba(67, 155, 140, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 55px rgba(67, 155, 140, 0.1);
+}
+
+.about-card h3 {
+    margin-bottom: 14px;
+    color: #111111;
+}
+
+.about-card p,
+.about-card ul {
+    color: #555555;
+    line-height: 1.8;
+}
+
+.about-card ul {
+    list-style: disc inside;
+    padding-left: 0;
+}
+
+.about-card ul li {
+    margin-bottom: 10px;
+}
+
+.experience-section {
+    padding: 80px 8%;
+    background: #f9fbfc;
+}
+
+.section-header {
+    max-width: 740px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-header span {
+    display: inline-block;
+    color: #439b8c;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: 2.6rem;
+    margin-bottom: 16px;
+    color: #111111;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #555555;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.experience-card {
+    background: #ffffff;
+    border: 1px solid rgba(67, 155, 140, 0.12);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 25px 60px rgba(67, 155, 140, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 70px rgba(67, 155, 140, 0.1);
+}
+
+.experience-type {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(67, 155, 140, 0.1);
+    color: #2a7b6f;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.experience-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+.experience-card p {
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.experience-card ul {
+    list-style: disc inside;
+    color: #555555;
+    line-height: 1.7;
+}
+
+.experience-card ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 980px) {
+    .experience-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 3.2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+} 
+
 .hero-title {
     font-size: 4rem;
     font-weight: 700;

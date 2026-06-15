@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 html {
@@ -498,8 +498,9 @@ html {
     color: #444444;
     max-width: 680px;
     margin-bottom: 35px;
-    position: relative;
     z-index: 1;
+    position: relative;
+
 }
 
 .hero-section:hover .hero-title,
@@ -538,8 +539,9 @@ html {
 
 /* LIENS PROFESSIONNELS */
 .professional-links {
-    margin-top: 30px;
+    margin-top: 10px;
     position: relative;
+
     z-index: 1;
 }
 
@@ -547,10 +549,10 @@ html {
     display: inline-block;
     color: #439b8c;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
     padding: 10px 20px;
     border: 2px solid #439b8c;
-    border-radius: 6px;
+    border-radius: 4px;
     transition: all 0.2s ease;
 }
 
@@ -570,5 +572,18 @@ html {
 .hero-section {
     width: 100%;
     min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 780px) {
+    .swipe-arrow {
+        font-size: 2.2rem;
+    }
+}
+
+/* Make arrows friendlier on touch and reduce overlap on very small screens */
+@media (max-width: 480px) {
+    .swipe-left { left: 12px; }
+    .swipe-right { right: 12px; }
+    .swipe-arrow { opacity: 0.95; }
 }
 

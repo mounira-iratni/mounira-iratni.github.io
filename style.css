@@ -120,6 +120,14 @@ html {
     animation: fadeInUp 1s ease both;
 }
 
+.panel-content p {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    position: center;
+}
+
 .hero-topline {
     display: inline-flex;
     padding: 10px 18px;

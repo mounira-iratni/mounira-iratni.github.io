@@ -9,6 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+    // Désactiver le clic droit
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // Bloquer F12 et les raccourcis d'inspection
+    document.onkeydown = function(e) {
+        if (e.keyCode === 123) return false; // F12
+        if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) return false; // Ctrl+Shift+I / J
+        if (e.ctrlKey && e.keyCode === 85) return false; // Ctrl+U (Afficher la source)
+    };
+</script>
 <body>
 
     <header class="navbar">

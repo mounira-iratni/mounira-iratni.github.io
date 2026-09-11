@@ -74,52 +74,61 @@
             <div class="swipe-arrow swipe-right">>></div>
         </section>
 
-        <section id="about" class="panel about-section">
-            <div class="swipe-arrow swipe-left"><<</div>
-            <div class="panel-content">
-                <div class="section-header">
-                    <span>À propos</span>
-                    <h2>Qui je suis</h2>
-                    <p>Un aperçu clair de mon profil, de mes centres d'intérêt, de ma formation et des langues que je maîtrise.</p>
-                </div>
+        <section class="about-section" id="about">
+            <div class="container">
+                <span class="section-tag">À propos</span>
+                <h2 class="section-title">Profil & Compétences</h2>
 
                 <div class="about-grid">
-                    <div class="about-card">
-                        <h3>À propos de moi</h3>
-                        <p>Je suis une ingénieure logicielle junior motivée, passionnée par le développement de solutions élégantes et performantes. J'aime apprendre en continu et transformer des idées en produits réels.</p>
+                    <!-- CARTE 1 : Présentation -->
+                    <div class="about-card intro-card">
+                        <h3>Ingénieure Logiciel & Cloud</h3>
+                        <p>
+                            Passionnée par l'automatisation, la conception de solutions robustes et les infrastructures Cloud. Actuellement chez <strong>Dassault Systèmes</strong>, j'interviens sur la containerisation, les architectures distribuées et les pipelines CI/CD.
+                        </p>
+                        <div class="lang-tags">
+                            <span class="tag">🇫🇷 Français : Courant</span>
+                            <span class="tag">🇬🇧 Anglais : Professionnel</span>
+                        </div>
                     </div>
-                    <div class="about-card">
-                        <h3>Centres d'intérêt</h3>
-                        <ul>
-                            <li>Déploiement des pipelines CI/CD</li>
-                            <li>Déploiement de ressources cloud avec Terraform</li>
-                            <li>Automatisation, infrastructure as code, monitoring</li>
-                            <li>Développement web</li>
-                            <li>UI/UX et expérience utilisateur</li>
-                            <li>Automatisation et tests</li>
+
+                    <!-- CARTE 2 : Piliers techniques -->
+                    <div class="about-card skills-card">
+                        <h3>Domaines d'expertise</h3>
+                        <ul class="skills-list">
+                            <li><strong>Cloud & Infra :</strong> Kubernetes, Docker, Terraform, AWS, Ansible, Helm</li>
+                            <li><strong>Automatisation :</strong> CI/CD, pipelines GitLab, tests automatisés</li>
+                            <li><strong>Développement :</strong> Java, Python, Bash, JavaScript</li>
+                            <li><strong>Observabilité :</strong> Prometheus, Grafana</li>
                         </ul>
                     </div>
-                    <div class="about-card">
+
+                    <!-- CARTE 3 : Parcours & Formations -->
+                    <div class="about-card education-card">
                         <h3>Formation</h3>
-                        <p>Diplômée de Master 2 en Réseaux, spécialité DevOps à Sorbonne Université. Précedemment diplômée en master Réseaux mobilité et Systèmes Embarqués à l'Université Mouloud Mammeri de Tizi Ouzou.</p>
-                        <ul>
-                            <li>Projets de fin d'études en Optimisation d’énergie pour le placement de services dans le Cloud-Edge</li>
-                        </ul>
-                    </div>
-                    <div class="about-card">
-                        <h3>Langues</h3>
-                        <ul>
-                            <li>Français - Courant</li>
-                            <li>Anglais - Compétences professionnelles</li>
-                        </ul>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div>
+                                <div class="edu-title">Master Informatique & Réseaux (DevOps / Cloud)</div>
+                                <div class="edu-school">Sorbonne Université</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div>
+                                <div class="edu-title">Master Réseaux, Mobilité & Systèmes Embarqués</div>
+                                <div class="edu-school">Université Mouloud Mammeri</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="swipe-arrow swipe-right">>></div>
         </section>
 
         <section id="experience" class="panel experience-section">
-            <div class="swipe-arrow swipe-left"><<</div>
+            <button class="nav-arrow prev" aria-label="Précédent">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
             <div class="panel-content">
                 <div class="section-header">
                     <span>Mes expériences</span>

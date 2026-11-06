@@ -1,91 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.horizontal-sections');
-  if (!container) return;
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('menu');
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+  const sections = navLinks
+    .map((link) => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
 
-  const panels = Array.from(container.querySelectorAll('.panel'));
-  const navLinks = Array.from(document.querySelectorAll('.navbar a[href^="#"]'));
+  /* ----- Menu mobile ----- */
+  function closeMenu() {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Ouvrir le menu');
+  }
 
-  // Flèches de chaque section
-  panels.forEach((panel, i) => {
-    const left = panel.querySelector('.swipe-left');
-    const right = panel.querySelector('.swipe-right');
-
-    if (left) left.addEventListener('click', () => scrollToIndex(i - 1));
-    if (right) right.addEventListener('click', () => scrollToIndex(i + 1));
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
   });
 
-  // Liens internes (menu, boutons "Voir mon parcours", etc.)
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener('click', (e) => {
-      const idx = panels.findIndex(p => '#' + p.id === link.getAttribute('href'));
-      if (idx === -1) return;
-      e.preventDefault();
-      scrollToIndex(idx);
-    });
+  // Ferme le menu après un clic sur un lien
+  menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+
+  // Ferme le menu avec Échap
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
   });
 
-  function isHorizontal() {
-    return container.scrollWidth > container.clientWidth + 10;
-  }
-
-  function scrollToIndex(idx) {
-    if (idx < 0) idx = panels.length - 1;
-    if (idx >= panels.length) idx = 0;
-    const target = panels[idx];
-    if (!target) return;
-
-    if (isHorizontal()) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      container.scrollTo({ left: target.offsetLeft - container.offsetLeft, behavior: 'smooth' });
-    } else {
-      const navHeight = document.querySelector('.navbar')?.offsetHeight || 0;
-      const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 12;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  }
-
-  function currentVisibleIndex() {
-    const rects = panels.map(p => p.getBoundingClientRect());
-    if (isHorizontal()) {
-      const centerX = window.innerWidth / 2;
-      for (let i = 0; i < rects.length; i++) {
-        if (rects[i].left <= centerX && rects[i].right >= centerX) return i;
-      }
-    } else {
-      const centerY = window.innerHeight / 2;
-      for (let i = 0; i < rects.length; i++) {
-        if (rects[i].top <= centerY && rects[i].bottom >= centerY) return i;
-      }
-    }
-    return 0;
-  }
-
-  // Navigation au clavier
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') scrollToIndex(currentVisibleIndex() + 1);
-    if (e.key === 'ArrowLeft') scrollToIndex(currentVisibleIndex() - 1);
+  // Ferme le menu si l'écran repasse en grand format
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860) closeMenu();
   });
 
-  // Lien actif dans le menu selon la section visible
-  function updateActiveLink() {
-    const current = panels[currentVisibleIndex()];
-    navLinks.forEach((link) => {
-      link.classList.toggle('active', link.getAttribute('href') === '#' + current.id);
-    });
+  /* ----- Ombre de l'en-tête au défilement ----- */
+  function updateHeader() {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+
+  /* ----- Lien actif selon la section visible ----- */
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    sections.forEach((section) => spy.observe(section));
+
+    /* ----- Apparition des éléments ----- */
+    const reveal = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((el) => reveal.observe(el));
+  } else {
+    // Navigateurs anciens : tout est affiché directement
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
   }
 
-  let ticking = false;
-  function onScroll() {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      updateActiveLink();
-      ticking = false;
-    });
-  }
-
-  container.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-  updateActiveLink();
+  /* ----- Année du pied de page ----- */
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 });

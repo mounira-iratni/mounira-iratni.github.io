@@ -3,387 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Mounira Iratni, ingénieure logiciel Java & Cloud en alternance chez Dassault Systèmes (R&D ENOVIA). Disponible en CDI dès janvier 2027.">
+    <meta name="description" content="Portfolio de Mounira Iratni, ingénieure logiciel Java & Cloud chez Dassault Systèmes. Disponible en CDI dès janvier 2027.">
     <title>Mounira Iratni · Ingénieure logiciel Java & Cloud</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-    <a class="skip-link" href="#apropos">Aller au contenu</a>
- 
-    <!-- ===== EN-TÊTE ===== -->
-    <header class="site-header">
-        <div class="container nav-inner">
-            <a href="#accueil" class="brand">
-                <img src="photo.JPG" alt="" class="brand-avatar">
-                <span>Mounira Iratni</span>
+
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="header">
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="#accueil" class="nav-brand">
+                <span class="nav-logo">MI</span>
+                <span class="nav-name">Mounira Iratni</span>
             </a>
- 
+
+            <ul class="nav-links" id="menu">
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#experience">Expériences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="CV_Mounira_Iratni.pdf" target="_blank" rel="noopener" class="nav-cta">CV ↗</a>
+
             <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
-                <span></span><span></span><span></span>
+                <span></span><span></span>
             </button>
- 
-            <nav id="menu" aria-label="Navigation principale">
-                <ul class="nav-links">
-                    <li><a href="#apropos">À propos</a></li>
-                    <li><a href="#experience">Expériences</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#formation">Formation</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="CV_Mounira_Iratni.pdf" target="_blank" rel="noopener" class="nav-cv">CV ↗</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
- 
+
     <main>
- 
-        <!-- ===== ACCUEIL ===== -->
+
+        <!-- ========== ACCUEIL ========== -->
         <section id="accueil" class="hero">
             <div class="container hero-grid">
                 <div class="hero-text">
-                    <p class="eyebrow">Ingénieure logiciel Java &amp; Cloud</p>
-                    <h1>Bonjour, je suis <span class="accent">Mounira Iratni</span></h1>
-                    <p class="lead">
-                        Diplômée de deux Master 2 en réseaux et en formation développement full-stack,
-                        je suis alternante chez <strong>Dassault Systèmes</strong>, au sein de la R&amp;D ENOVIA.
-                        Je recherche un CDI en développement logiciel Java, cloud et automatisation des tests.
+                    <p class="status"><span class="status-dot"></span>Disponible en CDI dès janvier 2027</p>
+
+                    <h1>
+                        Mounira Iratni
+                        <span class="gradient-text">Ingénieure logiciel Java&nbsp;&amp;&nbsp;Cloud</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        Alternante chez <strong>Dassault Systèmes</strong> (R&amp;D ENOVIA), je développe des applications
+                        full-stack en Java Spring Boot et React, j'automatise les tests avec Jenkins et je déploie
+                        des ressources cloud avec Kubernetes et Terraform.
                     </p>
- 
-                    <ul class="hero-badges" aria-label="Informations clés">
-                        <li>Dassault Systèmes · R&amp;D ENOVIA</li>
-                        <li>Île-de-France</li>
-                        <li class="badge-highlight">Disponible dès janvier 2027</li>
-                    </ul>
- 
-                    <div class="actions">
-                        <a href="#contact" class="btn btn-primary">Me contacter</a>
-                        <a href="CV_Mounira_Iratni.pdf" target="_blank" rel="noopener" class="btn btn-outline">Télécharger mon CV</a>
+
+                    <div class="hero-actions">
+                        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                        <a href="CV_Mounira_Iratni.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Télécharger mon CV</a>
                     </div>
                 </div>
- 
-                <div class="hero-photo">
-                    <img src="photo.JPG" alt="Portrait de Mounira Iratni" width="320" height="320">
+
+                <div class="hero-visual">
+                    <div class="photo-frame">
+                        <img src="photo.JPG" alt="Portrait de Mounira Iratni" width="360" height="360">
+                    </div>
+                    <div class="code-card" aria-hidden="true">
+                        <p><span class="c-key">role</span>: <span class="c-str">"Software Engineer"</span>,</p>
+                        <p><span class="c-key">stack</span>: [<span class="c-str">"Java"</span>, <span class="c-str">"Spring"</span>, <span class="c-str">"K8s"</span>],</p>
+                        <p><span class="c-key">location</span>: <span class="c-str">"Île-de-France"</span></p>
+                    </div>
                 </div>
             </div>
- 
+
             <div class="container">
                 <ul class="stats">
                     <li><strong>2</strong><span>Master 2 en réseaux</span></li>
                     <li><strong>2</strong><span>expériences R&amp;D chez Dassault Systèmes</span></li>
                     <li><strong>4</strong><span>projets techniques</span></li>
+                    <li><strong>3</strong><span>certifications</span></li>
                 </ul>
             </div>
         </section>
- 
-        <!-- ===== À PROPOS & COMPÉTENCES ===== -->
+
+        <!-- ========== À PROPOS ========== -->
         <section id="apropos" class="section">
             <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">À propos</p>
-                    <h2>Profil &amp; compétences</h2>
-                    <p>
-                        Mon parcours associe le développement logiciel et le cloud : du déploiement de ressources
-                        cloud avec Kubernetes et Terraform au développement d'applications full-stack en Java Spring Boot
-                        et React, en passant par l'automatisation des tests avec Jenkins.
-                    </p>
-                </header>
- 
-                <div class="skills-grid">
-                    <article class="card reveal">
-                        <h3>Langages &amp; frameworks</h3>
-                        <ul class="chips">
+                <div class="section-head reveal">
+                    <span class="section-num">01</span>
+                    <div>
+                        <p class="section-label">À propos</p>
+                        <h2>Profil &amp; compétences</h2>
+                    </div>
+                </div>
+
+                <div class="bento">
+                    <article class="tile tile-intro reveal">
+                        <h3>Entre le code et l'infrastructure</h3>
+                        <p>
+                            Diplômée de deux Master 2 en réseaux et en formation développement full-stack, j'associe
+                            le développement logiciel et le cloud. Je conçois des applications de bout en bout,
+                            je les déploie et je les supervise.
+                        </p>
+                        <p>
+                            Je recherche un CDI en <strong>développement logiciel Java, cloud et automatisation des tests</strong>.
+                        </p>
+                    </article>
+
+                    <article class="tile reveal">
+                        <p class="tile-label">// Langages</p>
+                        <ul class="tags">
                             <li>Java</li><li>Spring Boot</li><li>Python</li><li>Django REST</li><li>JavaScript</li>
                         </ul>
                     </article>
-                    <article class="card reveal">
-                        <h3>Web</h3>
-                        <ul class="chips">
+
+                    <article class="tile reveal">
+                        <p class="tile-label">// Web</p>
+                        <ul class="tags">
                             <li>React</li><li>Vue.js</li><li>HTML</li><li>CSS</li>
                         </ul>
                     </article>
-                    <article class="card reveal">
-                        <h3>Cloud &amp; DevOps</h3>
-                        <ul class="chips">
+
+                    <article class="tile reveal">
+                        <p class="tile-label">// Cloud &amp; DevOps</p>
+                        <ul class="tags">
                             <li>AWS</li><li>OpenStack</li><li>Kubernetes</li><li>Docker</li><li>Terraform</li>
                         </ul>
                     </article>
-                    <article class="card reveal">
-                        <h3>CI/CD &amp; tests</h3>
-                        <ul class="chips">
+
+                    <article class="tile reveal">
+                        <p class="tile-label">// CI/CD &amp; tests</p>
+                        <ul class="tags">
                             <li>Jenkins</li><li>GitLab CI</li><li>GitHub Actions</li><li>JMeter</li><li>JUnit</li>
                         </ul>
                     </article>
-                    <article class="card reveal">
-                        <h3>Observabilité</h3>
-                        <ul class="chips">
+
+                    <article class="tile reveal">
+                        <p class="tile-label">// Observabilité</p>
+                        <ul class="tags">
                             <li>Prometheus</li><li>Grafana</li><li>OpenTelemetry</li><li>Sentry</li>
                         </ul>
                     </article>
-                    <article class="card reveal">
-                        <h3>Données &amp; systèmes</h3>
-                        <ul class="chips">
+
+                    <article class="tile reveal">
+                        <p class="tile-label">// Données &amp; systèmes</p>
+                        <ul class="tags">
                             <li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>Linux</li><li>Windows</li>
                         </ul>
                     </article>
                 </div>
             </div>
         </section>
- 
-        <!-- ===== EXPÉRIENCES ===== -->
-        <section id="experience" class="section section-alt">
+
+        <!-- ========== EXPÉRIENCES ========== -->
+        <section id="experience" class="section">
             <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">Parcours</p>
-                    <h2>Expériences professionnelles</h2>
-                </header>
- 
-                <ol class="timeline">
-                    <li class="timeline-item reveal">
-                        <article class="card">
-                            <div class="xp-head">
-                                <div>
-                                    <h3>Ingénieure logiciel Java</h3>
-                                    <p class="xp-company">Dassault Systèmes · R&amp;D ENOVIA</p>
-                                </div>
-                                <div class="xp-meta">
-                                    <span class="pill">Alternance</span>
-                                    <span>Sept. 2025 – aujourd'hui</span>
-                                    <span>Vélizy-Villacoublay</span>
-                                </div>
-                            </div>
- 
+                <div class="section-head reveal">
+                    <span class="section-num">02</span>
+                    <div>
+                        <p class="section-label">Parcours</p>
+                        <h2>Expériences professionnelles</h2>
+                    </div>
+                </div>
+
+                <div class="tabs reveal">
+                    <div class="tab-list" role="tablist" aria-label="Expériences">
+                        <button class="tab active" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1">
+                            <span class="tab-company">Dassault Systèmes</span>
+                            <span class="tab-sub">R&amp;D ENOVIA · Alternance</span>
+                        </button>
+                        <button class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2" tabindex="-1">
+                            <span class="tab-company">Dassault Systèmes</span>
+                            <span class="tab-sub">R&amp;D OUTSCALE · Stage</span>
+                        </button>
+                        <button class="tab" role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3" tabindex="-1">
+                            <span class="tab-company">Algérie Télécom</span>
+                            <span class="tab-sub">Réseaux · Stage</span>
+                        </button>
+                    </div>
+
+                    <div class="tab-panels">
+                        <article class="tab-panel active" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+                            <header class="panel-head">
+                                <h3>Ingénieure logiciel Java</h3>
+                                <p class="panel-meta">Sept. 2025 – aujourd'hui · Vélizy-Villacoublay</p>
+                            </header>
+
                             <h4>Développement full-stack</h4>
-                            <ul>
+                            <ul class="checklist">
                                 <li>Migration et enrichissement fonctionnel d'un outil d'installation automatisée de la 3DEXPERIENCE vers une architecture client-serveur.</li>
                                 <li>Développement full-stack : backend Spring Boot (Java), frontend React, base de données MySQL.</li>
                                 <li>Conception et mise en place d'un pipeline CI/CD GitLab.</li>
                             </ul>
- 
+
                             <h4>Automatisation des tests</h4>
-                            <ul>
+                            <ul class="checklist">
                                 <li>Conception et développement d'un pipeline CI/CD Jenkins pour l'automatisation des tests de performance (ODT Replay) du logiciel ENOVIA.</li>
                             </ul>
- 
-                            <ul class="chips chips-sm">
+
+                            <ul class="tags tags-sm">
                                 <li>Java</li><li>Spring Boot</li><li>React</li><li>MySQL</li><li>GitLab CI</li><li>Jenkins</li><li>JMeter</li><li>JUnit</li><li>CAFET</li>
                             </ul>
                         </article>
-                    </li>
- 
-                    <li class="timeline-item reveal">
-                        <article class="card">
-                            <div class="xp-head">
-                                <div>
-                                    <h3>Développeuse logiciel Cloud</h3>
-                                    <p class="xp-company">Dassault Systèmes · R&amp;D OUTSCALE</p>
-                                </div>
-                                <div class="xp-meta">
-                                    <span class="pill">Stage</span>
-                                    <span>Févr. 2025 – août 2025</span>
-                                    <span>Vélizy-Villacoublay</span>
-                                </div>
-                            </div>
- 
-                            <p>Projet Cloud Inclusive pour la gestion des services cloud.</p>
-                            <ul>
+
+                        <article class="tab-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+                            <header class="panel-head">
+                                <h3>Développeuse logiciel Cloud</h3>
+                                <p class="panel-meta">Févr. 2025 – août 2025 · Vélizy-Villacoublay</p>
+                            </header>
+
+                            <p class="panel-intro">Projet Cloud Inclusive pour la gestion des services cloud.</p>
+                            <ul class="checklist">
                                 <li>Déploiement d'un proxy basé sur le concept d'opérateurs Kubernetes.</li>
                                 <li>Gestion de ressources cloud managées sur AWS avec Terraform.</li>
                                 <li>Stratégies de sécurité des échanges entre Kubernetes et AWS.</li>
                             </ul>
- 
-                            <ul class="chips chips-sm">
+
+                            <ul class="tags tags-sm">
                                 <li>Kubernetes</li><li>Opérateurs</li><li>AWS</li><li>Terraform</li><li>Sécurité</li>
                             </ul>
                         </article>
-                    </li>
- 
-                    <li class="timeline-item reveal">
-                        <article class="card">
-                            <div class="xp-head">
-                                <div>
-                                    <h3>Administration et ingénierie réseaux</h3>
-                                    <p class="xp-company">Algérie Télécom</p>
-                                </div>
-                                <div class="xp-meta">
-                                    <span class="pill">Stage</span>
-                                    <span>Janv. 2023 – avr. 2023</span>
-                                    <span>Tizi-Ouzou</span>
-                                </div>
-                            </div>
- 
-                            <ul>
+
+                        <article class="tab-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+                            <header class="panel-head">
+                                <h3>Administration et ingénierie réseaux</h3>
+                                <p class="panel-meta">Janv. 2023 – avr. 2023 · Tizi-Ouzou</p>
+                            </header>
+
+                            <ul class="checklist">
                                 <li>Conception et déploiement d'une infrastructure réseau basée sur le protocole OSPF.</li>
                                 <li>Tests de connectivité et vérification du bon fonctionnement du routage et des équipements réseau.</li>
                             </ul>
- 
-                            <ul class="chips chips-sm">
+
+                            <ul class="tags tags-sm">
                                 <li>OSPF</li><li>Routage</li><li>Réseaux</li>
                             </ul>
                         </article>
-                    </li>
-                </ol>
+                    </div>
+                </div>
             </div>
         </section>
- 
-        <!-- ===== PROJETS ===== -->
+
+        <!-- ========== PROJETS ========== -->
         <section id="projets" class="section">
             <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">Réalisations</p>
-                    <h2>Projets</h2>
-                </header>
- 
-                <div class="projects-grid">
-                    <article class="card project reveal">
-                        <p class="project-meta">Liora · Avr. 2026 – déc. 2026</p>
+                <div class="section-head reveal">
+                    <span class="section-num">03</span>
+                    <div>
+                        <p class="section-label">Réalisations</p>
+                        <h2>Projets</h2>
+                    </div>
+                </div>
+
+                <div class="projects">
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <span class="project-index">P.01</span>
+                            <span class="project-date">Avr. – déc. 2026</span>
+                        </div>
                         <h3>Application web full-stack &amp; DevOps</h3>
-                        <ul>
+                        <p class="project-place">Liora · Puteaux</p>
+                        <ul class="checklist">
                             <li>API REST sous Django REST Framework, connectée à une SPA React.</li>
                             <li>Pipeline CI/CD.</li>
                             <li>Mise en production sur Render (backend conteneurisé) et Vercel (frontend), avec suivi des erreurs sous Sentry.</li>
                         </ul>
-                        <ul class="chips chips-sm">
+                        <ul class="tags tags-sm">
                             <li>Django REST</li><li>React</li><li>Docker</li><li>Render</li><li>Vercel</li><li>Sentry</li>
                         </ul>
                     </article>
- 
-                    <article class="card project reveal">
-                        <p class="project-meta">Février 2025</p>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <span class="project-index">P.02</span>
+                            <span class="project-date">Févr. 2025</span>
+                        </div>
                         <h3>CI/CD pour une application web</h3>
-                        <ul>
+                        <p class="project-place">Projet académique</p>
+                        <ul class="checklist">
                             <li>Conteneurisation avec Docker et déploiement local sur K3s.</li>
                             <li>Pipeline GitLab CI/CD : tests, build, push, déploiement.</li>
                         </ul>
-                        <ul class="chips chips-sm">
+                        <ul class="tags tags-sm">
                             <li>Docker</li><li>K3s</li><li>GitLab CI</li>
                         </ul>
                     </article>
- 
-                    <article class="card project reveal">
-                        <p class="project-meta">Sorbonne Université · Mars – avr. 2024</p>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <span class="project-index">P.03</span>
+                            <span class="project-date">Mars – avr. 2024</span>
+                        </div>
                         <h3>Autoscaling &amp; Infrastructure as Code</h3>
-                        <ul>
+                        <p class="project-place">Sorbonne Université · Paris</p>
+                        <ul class="checklist">
                             <li>Conception d'une infrastructure cloud scalable et automatisée.</li>
                             <li>Supervision de l'infrastructure avec Prometheus et Grafana.</li>
                         </ul>
-                        <ul class="chips chips-sm">
+                        <ul class="tags tags-sm">
                             <li>IaC</li><li>Autoscaling</li><li>Prometheus</li><li>Grafana</li>
                         </ul>
                     </article>
- 
-                    <article class="card project reveal">
-                        <p class="project-meta">UMMTO, Tizi-Ouzou · Févr. – juil. 2023</p>
+
+                    <article class="project reveal">
+                        <div class="project-top">
+                            <span class="project-index">P.04</span>
+                            <span class="project-date">Févr. – juil. 2023</span>
+                        </div>
                         <h3>Optimisation d'énergie du placement de services Cloud-Edge</h3>
-                        <ul>
+                        <p class="project-place">UMMTO · Tizi-Ouzou</p>
+                        <ul class="checklist">
                             <li>Optimisation de l'efficacité énergétique dans le Fog Computing pour l'IoT, développée en Java.</li>
                         </ul>
-                        <ul class="chips chips-sm">
+                        <ul class="tags tags-sm">
                             <li>Java</li><li>Fog Computing</li><li>IoT</li>
                         </ul>
                     </article>
                 </div>
             </div>
         </section>
- 
-        <!-- ===== FORMATION ===== -->
-        <section id="formation" class="section section-alt">
+
+        <!-- ========== FORMATION ========== -->
+        <section id="formation" class="section">
             <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">Formation</p>
-                    <h2>Diplômes &amp; certifications</h2>
-                </header>
- 
-                <div class="edu-grid">
-                    <article class="card reveal">
-                        <h3>Formation</h3>
-                        <ul class="edu-list">
+                <div class="section-head reveal">
+                    <span class="section-num">04</span>
+                    <div>
+                        <p class="section-label">Formation</p>
+                        <h2>Diplômes &amp; certifications</h2>
+                    </div>
+                </div>
+
+                <div class="edu">
+                    <article class="tile reveal">
+                        <p class="tile-label">// Diplômes</p>
+                        <ol class="timeline">
                             <li>
+                                <span class="timeline-date">2025 – 2027</span>
                                 <strong>Alternance en développement full-stack</strong>
-                                <span>DataScientest · Puteaux · 2025 – 2027</span>
+                                <span>DataScientest · Puteaux</span>
                             </li>
                             <li>
+                                <span class="timeline-date">2023 – 2025</span>
                                 <strong>Master Réseaux, parcours DevOps</strong>
-                                <span>Sorbonne Université · Paris · 2023 – 2025</span>
+                                <span>Sorbonne Université · Paris</span>
                             </li>
                             <li>
+                                <span class="timeline-date">2021 – 2023</span>
                                 <strong>Master Réseaux, Mobilité et Systèmes Embarqués</strong>
-                                <span>UMMTO · Tizi-Ouzou · 2021 – 2023</span>
+                                <span>UMMTO · Tizi-Ouzou</span>
                             </li>
                             <li>
+                                <span class="timeline-date">2019 – 2021</span>
                                 <strong>Licence Systèmes d'information</strong>
-                                <span>UMMTO · Tizi-Ouzou · 2019 – 2021</span>
+                                <span>UMMTO · Tizi-Ouzou</span>
                             </li>
-                        </ul>
+                        </ol>
                     </article>
- 
+
                     <div class="edu-side">
-                        <article class="card reveal">
-                            <h3>Certifications</h3>
-                            <ul class="edu-list">
-                                <li>
-                                    <strong>CI/CD for Test Automation : Jenkins &amp; GitHub Actions</strong>
-                                    <span>Udemy</span>
-                                </li>
-                                <li>
-                                    <strong>Front &amp; Back : déploiement full-stack, Docker</strong>
-                                    <span>Liora</span>
-                                </li>
-                                <li>
-                                    <strong>Formation Deep Learning</strong>
-                                    <span>NVIDIA</span>
-                                </li>
+                        <article class="tile reveal">
+                            <p class="tile-label">// Certifications</p>
+                            <ul class="cert-list">
+                                <li><strong>CI/CD for Test Automation : Jenkins &amp; GitHub Actions</strong><span>Udemy</span></li>
+                                <li><strong>Front &amp; Back : déploiement full-stack, Docker</strong><span>Liora</span></li>
+                                <li><strong>Formation Deep Learning</strong><span>NVIDIA</span></li>
                             </ul>
                         </article>
- 
-                        <article class="card reveal">
-                            <h3>Langues</h3>
+
+                        <article class="tile reveal">
+                            <p class="tile-label">// Langues</p>
                             <ul class="lang-list">
-                                <li><span>Français</span><span class="pill">Courant · C2</span></li>
-                                <li><span>Anglais</span><span class="pill">Opérationnel · B2</span></li>
+                                <li>
+                                    <div class="lang-row"><span>Français</span><span>C2 · Courant</span></div>
+                                    <div class="bar"><span style="width: 100%"></span></div>
+                                </li>
+                                <li>
+                                    <div class="lang-row"><span>Anglais</span><span>B2 · Opérationnel</span></div>
+                                    <div class="bar"><span style="width: 72%"></span></div>
+                                </li>
                             </ul>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
- 
-        <!-- ===== CONTACT ===== -->
+
+        <!-- ========== CONTACT ========== -->
         <section id="contact" class="section">
             <div class="container">
-                <div class="contact-card reveal">
-                    <p class="eyebrow">Contact</p>
+                <div class="contact reveal">
+                    <span class="section-num">05</span>
+                    <p class="section-label">Contact</p>
                     <h2>Travaillons ensemble</h2>
-                    <p>
+                    <p class="contact-text">
                         Je recherche un CDI en développement logiciel Java, cloud et automatisation des tests,
                         à partir de janvier 2027. N'hésitez pas à me contacter.
                     </p>
-                    <div class="actions actions-center">
-                        <a href="mailto:mounira.iratni25@gmail.com" class="btn btn-primary">mounira.iratni25@gmail.com</a>
+                    <a href="mailto:mounira.iratni25@gmail.com" class="contact-mail">mounira.iratni25@gmail.com</a>
+                    <div class="contact-links">
                         <!-- Remplacez l'URL ci-dessous par celle de votre profil LinkedIn -->
-                        <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
-                        <a href="https://github.com/mounira-iratni" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+                        <a href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+                        <a href="https://github.com/mounira-iratni" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+                        <a href="CV_Mounira_Iratni.pdf" target="_blank" rel="noopener" class="btn btn-primary">Mon CV ↗</a>
                     </div>
                     <p class="contact-place">Île-de-France · Permis B</p>
                 </div>
             </div>
         </section>
- 
+
     </main>
- 
-    <footer class="site-footer">
-        <div class="container">
+
+    <footer class="footer">
+        <div class="container footer-inner">
             <p>© <span id="year">2026</span> Mounira Iratni</p>
             <a href="#accueil">Retour en haut ↑</a>
         </div>
     </footer>
- 
+
     <script src="script.js"></script>
     <script data-goatcounter="https://mouniratrack.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
- 
